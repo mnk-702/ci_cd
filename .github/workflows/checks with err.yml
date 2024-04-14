@@ -2,9 +2,9 @@ name: Code checks
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "err" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "err" ]
 
 jobs:
   build:
@@ -25,4 +25,4 @@ jobs:
         pip install pipenv pytest pyinstaller
     - name: Test with pytest
       run: |
-        pytest test_main.py
+        pytest test_main_err.py
